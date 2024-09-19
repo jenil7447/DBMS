@@ -1,1 +1,54 @@
+--String Function
 
+--part A
+
+--1. Find the length of following. (I) NULL (II) ‘ hello ’ (III) Blank
+select len(NULL), len('hello'), len('')
+
+--2. Display your name in lower & upper case.
+select lower('Devang')
+select upper('Devang')
+
+--3. Display first three characters of your name.
+select left('Devang',3)
+
+--4. Display 3rd to 10th character of your name.
+select SUBSTRING('Devang Shah',3,7)
+
+--5. Write a query to convert ‘abc123efg’ to ‘abcXYZefg’ & ‘abcabcabc’ to ‘ab5ab5ab5’ using REPLACE.
+select REPLACE('abc123efg', '123', 'XYZ'), REPLACE('abcabcabc', 'c', '5')
+
+--6. Write a query to display ASCII code for ‘a’,’A’,’z’,’Z’, 0, 9.
+select ASCII('a'), ASCII('A'), ASCII('z'), ASCII('Z')
+
+--7. Write a query to display character based on number 97, 65,122,90,48,57.
+select char(97), char(65), char(122), char(90), char(48), char(57)
+
+--8. Write a query to remove spaces from left of a given string ‘hello world ‘.
+select RTRIM('hello world          ')
+
+--9. Write a query to remove spaces from right of a given string ‘ hello world ‘.
+select LTRIM('       hello world          ')
+
+--10. Write a query to display first 4 & Last 5 characters of ‘SQL Server’.
+select left('SQL Server', 4), right('SQL Server',5)
+
+--11. Write a query to convert a string ‘1234.56’ to number (Use cast and convert function).
+select cast('1234.56' as float)
+
+--12. Write a query to convert a float 10.58 to integer (Use cast and convert function).
+select convert(float, 10.58)
+select cast(10.58 as int)
+
+--13. Put 10 space before your name using function.
+select SPACE(10)+'Devang'
+
+--14. Combine two strings using + sign as well as CONCAT ().
+select 'Devang'+' Shah'
+select CONCAT('Devang', ' ', 'Shah')
+
+--15. Find reverse of “Darshan”.
+select REVERSE('Darshan')
+
+--16. Repeat your name 3 times.
+select REPLICATE('Devang Shah', 3)
